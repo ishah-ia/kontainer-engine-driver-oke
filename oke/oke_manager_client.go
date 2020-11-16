@@ -334,7 +334,7 @@ func (mgr *ClusterManagerClient) CreateNodePool(ctx context.Context, state *Stat
 func getImageID(ctx context.Context, c core.ComputeClient, compartment, shape, displayName string) (core.Image, error) {
 	request := core.ListImagesRequest{
 		CompartmentId:   common.String(compartment),
-		OperatingSystem: common.String("Oracle Linux"),
+		OperatingSystem: common.String("Canonical Ubuntu"),
 		Shape:           common.String(shape),
 	}
 	r, err := c.ListImages(ctx, request)
